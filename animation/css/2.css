@@ -1,0 +1,32 @@
+body {
+	background-color: #F6F4EC;
+}
+.STYLE {
+	font-size: xx-large;
+	font-weight: bold;
+	color: #6633FF;
+}
+.STYLE1 {line-height:1.5}
+a:link {
+ text-decoration: none;
+ color: #6633FF;
+}
+a:visited {
+ text-decoration: none;
+ color: #6633FF;
+}
+a:hover {
+ text-decoration: none;
+ color: #6633FF;
+}
+a:active {
+ text-decoration: none;
+ color: #6633FF;
+}
+#Layer1 {
+	position:absolute;
+	left:200px;
+	top:50px;
+	width:800px;
+	z-index:1;
+}
