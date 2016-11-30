@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<Link Rel="SHORTCUT ICON" href="../../animation/image/ico.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>经典样例</title>
+
+<link rel="stylesheet" type="text/css" href="../css/2.css">
+
+</head>
+
+<body>
+
+<div id="Layer1">
+	<table width="100%" border="2" cellpadding="0">
+		<tr>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/1.html">基本概念和性质</a></span></div></td>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/2.html">经典样例</a></span></div></td>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/3.html">习题</a></span></div></td>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/4.html">习题解答</a></span></div></td>
+		</tr>
+	</table>
+</div>
+
+<div id="Layer2">
+	<p align="center" class="STYLE">经典样例</p>
+</div>
+  
+  
+<div id="Layer3">
+	<div style="text-indent: 2em;">
+	  <p>1.证明：集合$(0,1)=\{x\in \mathbb R:0&lt;x&lt;1\}$是不可数的.</p>
+	  <p>证明(反证法):假设集合$(0,1)$是可数的，则$(0,1)=\{x^{(1)},x^{(2)},\cdots\},x^{(i)}=0.x^{(i)}_1 x^{(i)}_2 \cdots x^{(i)}_k \cdots \}$</p>
+	  <p>令<br />
+	    $$<br />
+	    b_n=\left \{<br />
+	    \begin{array}{l}<br />
+	    % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...<br />
+	    2 \ \ \  x^{(n)}_n=1\\<br />
+	    1 \ \ \ \  x^{(n)}_n\neq1 \\<br />
+	    \end{array}<br />
+	    \right.<br />
+	    $$</p>
+	  <p>则$b=0.b_1b_2\cdots \notin(0,1),$但$0&lt;b&lt;1\in$,即$b\in(0,1),$矛盾.</p>
+	  <p>故实数集合$(0,1)$不可数.<br />
+	    </p>
+	  <p>2.证明实数是序完备的.</p>
+	  <p>证明:设$A\subset \mathbb R$是非空有上界集合,视$z$为$A$的一个上界，即$\exists z\in \mathbb R,\forall x\in A,x\leq z$</p>
+	  <p>若$z\in A,$则$z=\max A=\sup A$</p>
+	  <p>否则,$A_{-1}=\{x_{-1}=[x];x\in A\}\subset \mathbb Z$有上界$[z]$</p>
+	  <p>根据整数集的完备性，$\exists b_0=\max A_{-1}$</p>
+	  <p>即$\exists \hat{x}\in A,[\hat{x}]=b_0,$记$\alpha_0=b_0$</p>
+	  <p>若$\forall x\in A,x\leq \alpha_0,$则$\hat{x}=\sup A$</p>
+	  <p>否则$A_0=\{x_1:x\in A,x&gt;\alpha_0\}\neq\varnothing (x=x_{-1}+0.x_1x_2\cdots)$</p>
+	  <p>由$A_0\subset \mathbb N$有上界9知$\exists b_1=\max A_0$</p>
+	  <p>即$\exists \hat{x}\in A,s_1(\hat{x})=b_0+0.b_1,$记$\alpha _1=b_0+0.b_1$</p>
+	  <p>若$\forall x\in A,x\leq \alpha_1,$则$\hat{x}=\sup A$</p>
+	  <p>否则，$A_1=\{x_2:x\in A,x&gt;\alpha_1\}\neq \varnothing $,由$A_1\subset \mathbb N$有上界9,重复以上操作到第n步</p>
+	  <p>或者$\alpha_n=b_0+0.b_1\cdots b_n=\max A=\sup A$</p>
+	  <p>或者$A_n=\{x_(n+1):x\in A,x&gt;\alpha_n\}\neq \varnothing$,且$A_n\subset \mathbb N$有上界9</p>
+	  <p>即$\exists b_{n+1}=\max A_n$</p>
+	  <p>即$\exists \hat{x}\in A,s_(n+1)(\hat{x})=b_0+0.b_1\cdots b_(n+1),$记$\alpha _(n+1)=b_0+0.b_1\cdots b_(n+1)$</p>
+	  <p>如此下去,若$\forall n,\alpha_n \neq \max A,$视$\beta =b_0+0.b_1b_2\cdots b_n\cdots$</p>
+	  <p>情形I：$\forall n,\exists k&lt;n,b_k&lt;9,$此时$\beta \in\mathbb R,$以下证明$\beta=\sup A$</p>
+	  <p>假设$\exists x\in A,x&gt;\beta,$即$\exists n\in\mathbb N,\forall k&lt;n,x_k=b_k,x_n&gt;b_n$</p>
+	  <p>由$s_(n-1)(x)=b_0=0.b_1\cdots b_(n-1)=\alpha_(n-1)$得$x&gt;\alpha_(n-1),\Rightarrow x_n\in A_(n-1)$</p>
+	  <p>$\Rightarrow x_n \leq\max A_(n-1)=b_n,$与$x_n&gt;b_n$矛盾,从而$\beta$是$A$的一个上界.</p>
+	  <p>$\forall c&lt;\beta,$即$\exists n,\forall k&lt;n,c_k=b_k,c_n&lt;b_n$</p>
+	  <p>$\exists \hat{x},s_n(\hat{x})=\alpha_n=b_0+0.b_1\cdots b_n&gt;c$</p>
+	  <p>故$c$非$A$的上界</p>
+	  <p>从而$\beta=\sup A$</p>
+	  <p>情形II：$\exists m,b_m&lt;9.\forall k&gt;m,b_k=9,$记$\beta=b_0+0.b_1\cdots b_(m-1)b_m+1$下证$\beta=\sup A$</p>
+	  <p>$1):\forall x\in A,$或者$\exists n&lt;m,\forall k&lt;n,x_k=b_k,x_n&lt;b_n,$或者$\forall n\leq m,x_n=b_n$特别有</p>
+	  <p>$x_m&lt;b_m+1,$都有$x&lt;\beta.$从而$\beta$是$A$的一个上界.</p>
+	  <p>$2):\forall c&lt;\beta,$若$c&lt;\alpha_m=b_0+0.b_1\cdots b_m$ \ 由$\{\alpha_m\}$的构造可知,$\exists \hat{x}\in A,s_m(\hat{x})=\alpha_m$</p>
+	  <p>因此$\hat{x}&gt;c$</p>
+	  <p>若$c\geq \alpha_m,$由于$c\in \mathbb R,$对$m,\exists k&gt;m,c_k&lt;9,$由$\{\alpha_m\}$的构造可知</p>
+	  <p>$\exists \hat{x}\in A,s_k(\hat{x})=\alpha_k=b_0+0.b_1\cdots b_m\cdots b_k=b_0+0.b_1\cdots b_m9\cdots 9,$即$\hat{x_k}9&gt;c_k$</p>
+	  <p>因此$\hat{x}&gt;c$</p>
+	  <p>从而$c$非上界</p>
+	  <p>故$\beta=\sup A$</p>
+	  <p>综上实数的任何非空子集均有上确界，故实数集是完备的.<br />
+	    </p>
+	  <p>3.设$A\subset \mathbb R$非空,如果$A$有下界,则$A$必有下确界.</p>
+	  <p>证明：定义集合$B=\{$A的下界$\}$,因A有下界，故$B\neq \varnothing$,且A的元素都是B的上界.</p>
+	  <p>由确界原理得,B有上确界$\alpha $,下证$\alpha=\inf A$</p>
+	  <p>$1)\alpha$是A的下界(反证):假设$\alpha$不是A的下界,即$\exists a\in A,a&lt;\alpha$</p>
+	  <p>由上确界定义,$\exists b\in B,b&gt;a,$这与B定义矛盾,从而$\alpha$是A的下界.</p>
+	  <p>$2)\alpha$是A的最大下界：任取$c&gt;\alpha,$若c是A的下界,则$c\in B,$有$c \leq \alpha$ \ 矛盾</p>
+	  <p>综上A有下确界.<br />
+	    </p>
+	  <p>4.证明：集合$A\subset \mathbb R$有界当且仅当$\exists M&gt;0,\forall x\in A,|x|\leq M.$</p>
+	  <p>证明：若A有界,即$\exists \alpha,\beta \in \mathbb R,\forall x\in A,\alpha \leq x \leq \beta$</p>
+	  <p>取$M=\max\{|\alpha|,|\beta|\},$则$M&gt;0,\forall x\in A,-M\leq \alpha\leq x\leq \beta \leq M$</p>
+	  <p>即$|x|\leq M$</p>
+	  <p>反之,若$\exists M&gt;0,\forall x\in A,|x|\leq M,\Rightarrow -M\leq x\leq M,$故A有界.</p>
+	  <p>5.设$A,B\subset \mathbb R$非空,证明</p>
+	  <p>(1)若$A\subset B,$则$\sup A\leq \sup B,\inf A\geq \inf B$</p>
+	  <p>(2)若$\forall x\in A,\exists y\in B,$满足$\sup A\leqslant \sup B$</p>
+	  <p>(3)$\forall x\in \mathbb R,x=\sup{S_n(x):n\in \mathbb N}$</p>
+	  <p>证明：</p>
+	  <p>(1)$\forall x\in A,$由$A\subset B$得$x\in B$,从而$x\leq \sup B$</p>
+	  <p>$\therefore \sup B$为$A$的一个上界</p>
+	  <p>由上确界是最小的上界得$\sup B\geq \sup A$</p>
+	  <p>(2)$\forall x\in A,x\leq y$,从而$y$是$A$的一个上界,$y\geq \sup A,$又$\sup B\geq y$</p>
+	  <p>$\therefore \sup A\leq \sup B.$</p>
+	  <p>(3)①$\because S_n(x)\leq x$</p>
+	  <p>$\therefore x$是${S_n(x):n\in \mathbb N}$的一个上界</p>
+	  <p>②$\forall c&lt; x,\exists n,\forall k&lt;n,c_k=x_k,c_n&lt;x_n$</p>
+	  <p>$\therefore c&lt;S_n(x)$</p>
+	  <p>从而$c$非上界</p>
+	  <p>$\therefore x=\sup{S_n(x):n\in \mathbb N}. $<br />
+	    </p>
+	  <p>6.证明加法消去律：如果$x+y=x+z$,则$y=z.$</p>
+	  <p>证：$(-x)+(x+y)=-x+(x+z)\Longrightarrow (-x+x)+y=(-x+x)+z \Longrightarrow y=z$<br />
+	    </p>
+	  <p>7.证明：$\sup(A+B)=\sup A+\sup B;A+B={z:z=x+y,x\in A,y\in B}$</p>
+	  <p>证明：$\forall x\in A,y\in B,x\leq \sup A,y\leq \sup B$</p>
+	  <p>从而$x+y\leq \sup A+y\leq \sup A+\sup B$</p>
+	  <p>$\therefore \sup A+\sup B$是$x+y$的一个上界</p>
+	  <p>$\therefore \sup(A+B)\leq \sup A+\sup B$</p>
+	  <p>另一方面,$\forall \varepsilon &gt;0,\exists x\in A,x&gt;\sup A- \varepsilon,\exists y\in B,y&gt;\sup B-\varepsilon$</p>
+	  <p>从而$x+y&gt;\sup A+\sup B-2\varepsilon$</p>
+	  <p>由于$\varepsilon$的任意性可知$x+y\geq \sup A+\sup B$</p>
+	  <p>因此$\sup(A+B)\geq \sup A+\sup B$</p>
+	  <p>综上，$\sup(A+B)=\sup A+\sup B$<br />
+	    </p>
+	  <p>8(收缩闭区间套定理).设$\mathfrak{I}$为一个闭区间套，则</p>
+	  <p>(1)$\bigcap_{I\in \mathfrak I}I\neq \emptyset$</p>
+	  <p>(2)若$\mathfrak I$是收缩闭区间套，则$\bigcap_{I\in \mathfrak I}I$是单点集.</p>
+	  <p>证明：</p>
+	  <p>(1)$A=\{a:[a,c]\in \mathfrak I\},B=\{b:[d,b]\in \mathfrak I\}$</p>
+	  <p>$\forall a\in A,b\in B,$由$\mathfrak I$是闭区间套得$[a,c]\subset [d,b]$或$[d,b]\subset[a,c]$</p>
+	  <p>从而$d\leq a&lt;c\leq b$或者$a\leq d &lt;b \leq c$</p>
+	  <p>总有$a&lt;b$</p>
+	  <p>由确界原理得，$\exists \alpha =\sup A,\exists \beta =\inf B\in \mathbb R$且$\alpha \leq \beta$</p>
+	  <p>下证$[\alpha,\beta]=\bigcap_{I\in \mathfrak I}I$</p>
+	  <p>$\forall \xi \in \bigcap_{I\in \mathfrak I}I,$即$\forall I\in \mathfrak I,\xi \in I=[a,b],\Rightarrow a\leq \xi$</p>
+	  <p>$\Rightarrow a\leq \sup A\leq \xi.$</p>
+	  <p>又有$\xi \leq b,$即$\forall b\in B,b\geq \xi$由下确界定义$\xi \leq \inf B\leq b$</p>
+	  <p>$\Rightarrow \sup A\leq \xi \leq \inf B \Rightarrow \alpha \leq \xi \leq \beta$</p>
+	  <p>$\therefore \bigcap_{I\in \mathfrak I}I\subset [\alpha,\beta]$</p>
+	  <p>$\forall x\in [\alpha,\beta],$即$\alpha \leq x  \leq \beta,\forall I\in \mathfrak I,I=[a,b],a\in A,b\in B$</p>
+	  <p>$a\leq \sup A=\alpha\leq x\leq \beta=\inf B&lt;b$</p>
+	  <p>$\therefore x\in [a,b]=I,$故$x\in \bigcap_{I\in \mathfrak I}I$</p>
+	  <p>$\Rightarrow [\alpha,\beta]\subset \bigcap_{I\in \mathfrak I}I$</p>
+	  <p>综上，$[\alpha,\beta]=\bigcap_{I\in \mathfrak I}I.$</p>
+	  <p>(2)$\forall \varepsilon &gt;0,\exists I\in \mathfrak I,|I|&lt;\varepsilon$由$I=[a,b],a\in A,b\in B$得</p>
+	  <p>$a\leq \alpha =\sup A,b\geq \beta=\inf B$</p>
+	  <p>$\Rightarrow 0\leq \beta-\alpha&lt;b-a&lt;\varepsilon$</p>
+	  <p>由于$\varepsilon$的任意性，$\beta \leq \alpha$又$\beta -\alpha\geq 0$故$\beta=\alpha$</p>
+	  <p>从而为单点集.<br />
+	    </p>
+	  <p>9.证明确界原理和收缩闭区间套定理是等价的.</p>
+	  <p>证明：设$A$非空有上界，$A\subset \mathbb R,$记$B=\{x|\forall a\in A,a\leq x\}$即B中的元素均为A的上界</p>
+	  <p>由$A$有上界得$B\neq \emptyset$</p>
+	  <p>任取$a_1\in A,b_1\in B,$取$c=\frac{b_1-a_1}{2}$</p>
+	  <p>若$c\in B,$取$a_2=a_1,b_2=c$</p>
+	  <p>若$c\notin B$即$\exists \hat{a}\in A,\hat{a}&gt;c$取$a_2=\hat{a},b_2=b_1$</p>
+	  <p>有$b_2-a_2\leq \frac{b_1-a_1}{2}$如此下去，得到</p>
+	  <p>${[a_n,b_n]}$,满足$a_n\in A,b_n\in B,[a_{n+1},b_{n+1}]\subset [a_n,b_n]$且$b_n-a_n\leq \frac{b_1-a_1}{2^{n-1}}$</p>
+	  <p>从而${[a_n,b_n]}$为收缩闭区间套</p>
+	  <p>则$\exists \xi \in \mathbb R$有$\bigcap_{n=1}^{+\infty}[a_n,b_n]={\xi}$</p>
+	  <p>下证$\xi$是上确界</p>
+	  <p>①$\xi$是上界：假设$\xi$不是上界，即$\exists a^{*}\in A,a^{*}&gt;\xi$</p>
+	  <p>$\because \xi=\bigcap_{n=1}^{+\infty}[a_n,b_n]$</p>
+	  <p>$\therefore b_n-\xi&lt;b_n-a_n\leq \frac{b_1-a_1}{2^{n-1}}$</p>
+	  <p>$\exists n=[\log_{2} \frac{b_1-a_1}{a^{*}\xi}+1]+1$使得$b_n-\xi&lt;b_n-a_n\leq \frac{b_1-a-1}{2_{n-1}}&lt;a^{*}-\xi$成立</p>
+	  <p>$\therefore b_n&lt;a^{*}$又$b_n$为上界，$a^{*}&lt;b_n$矛盾.</p>
+	  <p>②$\xi$是最小上界：$\forall c&lt;\xi,\exists n=[\log_2 \frac{b_1-a_1}{\xi-c}]+1$使得</p>
+	  <p>$\xi-a'&lt;b_n-a_n\leq \frac{b_1-a_1}{2^{n-1}}&lt;\xi-c$即有$a'&gt;c$</p>
+	  <p>$\therefore c$非上界.</p>
+	  <p>综上$\xi=\sup A.$<br />
+	    </p>
+	  <p>10.证明实数的稠密性：即$\forall a,b\in \mathbb Q,a&lt;b$，则$\exists c\in \mathbb R \backslash \mathbb Q,\exists d\in \mathbb Q$，使得$a&lt;c&lt;d&lt;b.$</p>
+	  <p>证明：$\because a&lt;b$</p>
+	  <p>$\therefore \exists n,\forall k&lt;n,a_k=b_k,a_n&lt;b_n$</p>
+	  <p>又由$a\in \mathbb R$，对$n,\exists j&gt;n,a_j&lt;9$</p>
+	  <p>取$c_j=a_j+1,\forall k&lt;j,c_k=a_k,\forall k&gt;j,c_k=(\sqrt{2})_k$（表示$\sqrt{2}$的第k位）</p>
+	  <p>则$c\in\mathbb R\backslash\mathbb Q$且$a&lt;c&lt;b$</p>
+	  <p>由$c\in\mathbb R$，对$j,\exists i&gt;j,c_i&lt;9$，取$d_i=c_i+1,\forall k&lt;i,d_k=c_k,\forall k&gt;i,d_k=0$，</p>
+	  <p>则$d\in\mathbb Q$且$a&lt;c&lt;d&lt;b.$</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+var OriginTitile = document.title;
+var titleTime;
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) 
+	{
+        document.title = '我藏好了哦';
+        clearTimeout(titleTime);
+    }
+    else 
+	{
+        document.title = '被你发现啦';
+        titleTime = setTimeout(function() {
+            document.title = OriginTitile;
+        }, 1000);
+    }
+});
+</script>
+</body>
+
+</html>
