@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<Link Rel="SHORTCUT ICON" href="../../animation/image/ico.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>基本概念和性质</title>
+<link rel="stylesheet" type="text/css" href="../css/2.css">
+
+</head>
+
+<body>
+
+<div id="Layer1">
+	<table width="100%" border="2" cellpadding="0">
+		<tr>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/1.html">基本概念和性质</a></span></div></td>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/2.html">经典样例</a></span></div></td>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/3.html">习题</a></span></div></td>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/4.html">习题解答</a></span></div></td>
+		</tr>
+	</table>
+</div>
+
+<div id="Layer2">
+	<p align="center" class="STYLE">基本概念和性质</p>
+</div>
+  
+<div id="Layer3">
+	<div style="text-indent: 2em;">
+	  <p>定义1.1稠密性：若 $a&lt;b$ 则$\exists c\in \mathbb{R},$使得$a&lt;c&lt;b$</p>
+	  <p> 定义1.2$x&lt;y$:(1)[x]&lt;[y]$或$(2):$\exists n,\forall k\leq n,x(k)=y(k),x(n+1)&lt;y(n+1)$</p>
+	  <p> 定义1.3三歧性：$x,y\in \mathbb R,x=y,x&lt;y,x&gt;y$有且仅有一个成立</p>
+	  <p> 性质1：上确界是唯一的</p>
+	  <p> 性质2:实数集$\mathbb R$的非空子集必有上确界(完备性)</p>
+	  <p> 定义1.4实数集$\mathbb R$的下界和下确界：设$A\subset \mathbb R$非空</p>
+	  <p> (1)下界：若$\exists \alpha \in \mathbb R,s.t.\forall a\in A,a\geq \alpha,$则称$\alpha$为$A$的一个下界，并且说$A$是下有界的</p>
+	  <p> (2)下确界：设$\alpha \in\mathbb R$是$A$的下界,如果$\forall c&gt;\alpha,\exists a\in A,a&lt;c$,则称$\alpha $是$A$的下确界</p>
+	  <p> 定义1.5闭区间套：设$\mathscr I$是一个以有限闭区间为元素的非空集合，如果$\forall  I,J\in \mathscr I,I\subset J,J\subset I$必有一个成立，则称$\mathscr I$是一个闭区间套</p>
+	  <p> 定义1.6收缩闭区间套：设$\mathscr I$是一个闭区间套，如果$\forall \epsilon&gt;0,\exists I\in \mathscr I$满足$|I|&lt;\epsilon,$则称$\mathscr I$是一个收缩闭区间套</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+var OriginTitile = document.title;
+var titleTime;
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) 
+	{
+        document.title = '我藏好了哦';
+        clearTimeout(titleTime);
+    }
+    else 
+	{
+        document.title = '被你发现啦';
+        titleTime = setTimeout(function() {
+            document.title = OriginTitile;
+        }, 1000);
+    }
+});
+</script>
+</body>
+
+</html>
