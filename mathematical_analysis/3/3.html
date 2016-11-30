@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<Link Rel="SHORTCUT ICON" href="../../animation/image/ico.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>习题</title>
+
+<link rel="stylesheet" type="text/css" href="../css/2.css">
+
+</head>
+
+<body>
+
+<div id="Layer1">
+	<table width="100%" border="2" cellpadding="0">
+		<tr>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/1.html">基本概念和性质</a></span></div></td>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/2.html">经典样例</a></span></div></td>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/3.html">习题</a></span></div></td>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/4.html">习题解答</a></span></div></td>
+		</tr>
+	</table>
+</div>
+
+<div id="Layer2">
+	<p align="center" class="STYLE">习题</p>
+</div>
+  
+  
+<div id="Layer3">
+    <div style="text-indent: 2em;">
+      <p>1.证明：$\forall \varepsilon&gt;0,\exists N\in \mathbb N,$使得$\forall n&gt;N,$有$\frac{1}{n}&lt;\varepsilon.$</p>
+      <p>2.证明：如果$\varepsilon&gt;0,x&lt;y+\varepsilon,$则$x\leq y$.</p>
+      <p>3.设$A,B\subset \mathbb R$非空.证明：</p>
+      <p>如果$\forall a\in A,b\in B,a\leq b,$则$\exists c\in  \mathbb R$满足$\forall a\in A,b\in B,a\leq c\leq b.$</p>
+      <p>4.设$A\subset \mathbb R$非空.记$-A=\{-a:a\in A\}$证明：</p>
+      <p>$\sup(-A)=-\inf A$且$\inf(-A)=\sup A$.</p>
+      <p>5.设$A,B\subset \mathbb R$非空有界，$A+B=\{z:z=x+y,x\in A,y\in B\}$.证明：</p>
+      <p>(1)$\inf (A+B)=\inf A+\inf B $</p>
+      <p>(2)$\inf(A+B)\leq \inf A+\sup B\leq \sup(A+B).$</p>
+      <p>6.如果将闭区间套定义中的闭区间改成开区间，相应于闭区间套原理的结果对开区间套还成立吗？</p>
+      <p>7.证明：</p>
+      <p>(1)$[0,1]=\bigcap_{n=1}^{\infty}(-\frac{1}{n},1+\frac{1}{n})$</p>
+      <p>(2)$(0,1)=\bigcup_{n=2}^{+\infty}(\frac{1}{n},1-\frac{1}{n})$</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+var OriginTitile = document.title;
+var titleTime;
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) 
+	{
+        document.title = '我藏好了哦';
+        clearTimeout(titleTime);
+    }
+    else 
+	{
+        document.title = '被你发现啦';
+        titleTime = setTimeout(function() {
+            document.title = OriginTitile;
+        }, 1000);
+    }
+});
+</script>
+</body>
+
+</html>
