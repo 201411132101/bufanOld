@@ -36,39 +36,239 @@ MathJax.Hub.Config({
   
   
 <div id="Layer3">
-    <strong>
-		<p> 全集的余集是 $\emptyset:$ 一个集合的余集的余集为其本身，即$(A^{c})^{c}=A$.</p>
-		<p>集合的基本特征是：对于给定的集合$A$和对象$a$,$a\in A$和$a\notin A$两种有且只有一个成立.</p>
-		<p>映射指的是集合$A$和$B$中元素的一种对应关系：$\forall x\in A, \exists !y\in B$使得$x$与$y$对应，数学语言表述为:$ f\in A\times B,$满足$\forall x\in A，y\in B,s.t.(x,y)\in f,$称此关系为$A$到$B$的映射.<br />
-		  $$
-		  \left\{
-		  \begin{array}{l}
-		  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-		  \mbox{f是满射:}\forall y\in B,f^{-1}(y)\neq \emptyset\\
-		  \mbox{f是单射:}\forall y\in B,f^{-1}(y)\mbox{至多包含一个元素.} \\
-		  \end{array}
-		  \right.
-		  $$ 
-		<p>复合映射：设$A,B,C$为非空集合，$f:A\rightarrow B$和$g:B\rightarrow C$为映射，定义$h:A\rightarrow C$为$h(x)=g(f(x)):\forall x\in A$,则$h$是$A$到$C$的一个映射，$h$叫作$f$和$g$的复合映射，记作$h=g\circ f.$</p>
-		<p>逆映射：设$f:A\rightarrow B$是映射，且$f$是双射，则存在映射$g:B\rightarrow A$满足：$g\circ f=I_{A};f\circ g=I_{B},$称这个$g$叫作$f$的逆映射，通常记作$f^{-1}$.</p>
-		<p>序：设$X$是一个非空集合，$X^{2}$的非空子集$\leq$,若$(x,y)\in \leq$,记作$x\leq y$,如果$\leqslant$满足下列性质:</p>
-		<p> (1)自返性：若$x\in X$,则有$x\leq x$ ;</p>
-		<p> (2)对称性：若$x\leq y,y\leq x,$则有$x=y$;</p>
-		<p> (3)传递性：若$x\leq y,y\leq z$.则有$x\leq z$.</p>
-		<p> 则称$\leq$为$X$上的一个序，称$X$为有序集.</p>
-		<p> 例子：对于集合$X$，记$P(X)$为$X$所有子集构成的集合，在$P(X)$中定义集合包含，则$P(X)$关于集合包含构成一个序.
-		<p>全序集：如果有序集满足“三歧性”： $\forall x,y\in X,x&lt;y,x=y,x&gt;y$有且仅有一个成立，则称$X$是全序集.<br />
-		  <p>整数集合、有理数集合和实数集合按大小顺序都是全序集.</p>
-		  <p>设$X$为有序集，$A\subset X$非空</p>
-		  <p>(1)上界：若$\exists b\in X$,使得$\forall a\in A,a\leq b$,则称$A$是有上界的，称$b$为$A$的一个上界;</p>
-		  <p>(2)上确界：如果存在$b\in X$,满足①$b$为$A$的上界②$\forall c&lt;b$,都存在$a\in A,c&lt;a$则称$b$为$A$的上确界，记作$b=sup A$.</p>
-		  <p>(3)完备性：如果$X$的任何有上界的非空集合都有上确界，则称$X$是完备的.</p>
-		<p> 例子：$N$和$Z$是完备的有序集，$Q$不是完备的有序集.</p>
-		<p>集合的基数和势：集合的元素个数</p>
-		<p>定义：如果两个集合$A$和$B$之间存在双射，则称$A$和$B$对等，是等势的，或具有相同的基数，记作$A\sim B$或$|A|=|B|$.</p>
-		<p> 三条性质：(1)自返性：$|A|=|A|$;(2)对称性：若$|A|=|B|$,则$|B|=|A|$;(3)传递性：若$|A|=|B|,|B|=|C|$,则$|A|=|C|.$</p>
-		<p>无限集分为可数集和不可数集;有限集和可数集统称为至多可数集;可数集和自然数集等势;有限集与某个自然数等势.</p>
-	</strong>
+	<div style="text-indent: 2em;">
+		<p>    1.证明：$A\setminus B=A\bigcap{B^{c}}$</p>
+		<p> 解析：要证两个集合相等，只需证两个集合相互包含即可</p>
+		<p>证明：$\forall x\in A\setminus B,$即$x\in A$且<br />
+		$x\notin B \Rightarrow x\in A$且$x\in B^{c}\Rightarrow x\in A\bigcap{B^{c}} \Rightarrow A\setminus B\subset A\bigcap{B^{c}}$</p>
+		<p> $\forall x\in A\bigcap {B^{c}}$即$x\in A$且$x\in B^{c}\Rightarrow x\notin B$且$x\in A\Rightarrow x\in A\setminus B\Rightarrow A\bigcap{B^{c}}\subset A\setminus B$</p>
+		<p> $\therefore A\setminus B=A\bigcap{B^{c}}.$<br />
+		</p>
+		
+		<p>2.证明：$A\bigcap(\displaystyle \bigcup_{\alpha\in I}A_{\alpha})=\displaystyle\bigcup_{\alpha\in I}(A\bigcap A_{\alpha})$</p>
+		<p>证明：记$L=A\bigcap(\displaystyle\bigcup_{\alpha\in I}A_{\alpha}),R=\displaystyle\bigcup_{\alpha\in I}(A\bigcap A_{\alpha})$</p>
+		<p>$\forall x\in L,\Rightarrow x\in A$且$x\in \displaystyle\bigcup_{\alpha\in I}A_{\alpha}\Rightarrow \exists\beta\in I$使得$x\in A_{\beta}\Rightarrow x\in A\bigcap A_{\beta}\Rightarrow x\in R\Rightarrow L\subset R$</p>
+		<p>$\forall x\in R\Rightarrow \exists\beta\in I,$使得$x\in A\bigcap A_{\beta}\Rightarrow x\in A$且$x\in A_{\beta}\Rightarrow x\in A$且$x\in \displaystyle\bigcup_{\alpha\in I}A_{\alpha}\Rightarrow x\in L\Rightarrow R\subset L$</p>
+		<p>$\therefore L=R,$即$A\bigcap(\displaystyle\bigcup_{\alpha\in I}A_{\alpha})=\displaystyle\bigcup_{\alpha\in I}(A\bigcap A_{\alpha}).$<br />    </p>
+		
+		<p>3.证明：映射$f:X\rightarrow Y$若$A,B\subset X,A\subset B$则$f(A)\subset f(B)$</p>
+		<p>证明：$\forall y\in f(A),\exists x\in A,s.t.y=f(x)$</p>
+		<p>$\because A\subset B \therefore x\in B\Rightarrow f(x)\in f(B)$即$y\in f(B)$</p>
+		<p> $\therefore f(A)\subset f(B).$<br />    </p>
+		
+		<p>4.$f:X\rightarrow Y$为映射，$A,B\subset X$,求$f(A)\bigcap f(B)\subset f(A\bigcap B)$条件.</p>
+		<p>解析：用分析法，倒推.</p>
+		<p>解：$\forall y\in f(A)\bigcap f(B)\Rightarrow y\in f(A)$且$y\in f(B)$</p>
+		<p>即$\exists x_{1}\in A,x_{2}\in B$使得$f(x_{1})=y,f(x_{2})=y$<br/>
+		若$x_{1}=x_{2}$,则$y\in f(A\bigcap B)$<br/>若$x_{1}\neq x_{2}$,如果$x_{1}\in A\bigcap B$或$x_{2}\in A\bigcap B，\quad$ 同样有$y\in f(A\bigcap B)$</p>
+		<p>若$x_{1}\in A\setminus B,x_{2}\in B\setminus A,y\notin f(A\bigcap B)$</p>
+		<p>综上，只需保证$f(x)$是单射.<br />    </p>
+		
+		<p>5.复合映射定义中：$f:A\rightarrow B,g:B\rightarrow C$为映射，$h:A\rightarrow C$为$h(x)=g(f(x)),x\in A$证$h$为映射.</p>
+		<p> 解析：要证h为一个映射，只需证$\forall x\in A ,\exists ! y\in C,$使得$y=h(x)$.</p>
+		<p> 证明：记$h$为$A\times C $中的子集$h=\{(x,z):\exists(x,y)\in f,(y,z)\in g\}$</p>
+		<p> 下面证明：$\forall x\in A,\exists !(x,z)\in h$</p>
+		<p> 首证存在性：</p>
+		<p> 取定$x\in A$,由$f$为$A$到$B$的映射得，$\exists (x,y)\in f,$再由$g$是$B$到$C$的映射得,$\exists (y,z)\in g,$这样有$(x,z)\in h.$</p>
+		<p> 再证唯一性：</p>
+		<p> 设对于$x\in A,$有$(x,z)\in h$和$(x,u)\in h,$也就是存在$y,v\in B$,使得$(x,y),(x,v)\in f,(y,z),(v,u)\in g.$</p>
+		<p> 由$f$是映射，就有$(x,y)=(x,v),$因此$y=v$.</p>
+		<p> 再由$g$是映射，就有$(y,z)=(v,u),$因此$z=u$.</p>
+		<p> 从而证明了唯一性.</p>
+		<p> 故$g\circ f$即$h$是映射.<br />
+		</p>
+		<p>6.$f:A\rightarrow B$为双射，证明：存在映射$g:B\rightarrow A$满足:$(1)g\circ f =I_{A},(2)f \circ g=I_{B}$证明:定义$g=\{(x,y)\in B\times A:(y,x)\in f\}.$</p>
+		<p>解析：很容易验证$(1)g\circ f =I_{A},(2)f \circ g=I_{B}$.</p>
+		<p>只需验证$g$是映射</p>
+		<p>由$f$是映射,$\forall x\in B,\exists y\in A,$使得$(y,x)\in f,$即$(x,y)\in g$</p>
+		<p>若$(x,y),(x,z)\in g,$则$(y,x),(z,x)\in f,$由$f$是单射得$y=z$</p>
+		<p>从而,$\forall x\in B,\exists !y\in A,$使得$(x,y)\in g,$因此$g$是映射.<br />
+		</p>
+		<p>7.$A=\{x\in Q:0&lt;x&lt;1\}\subset Q,$证:$supA=1.$</p>
+		<p>解析：此题需要注意的是题目要求在$Q$中考虑$A$的上确界，而不是在$R$中考虑，我们只需借助上确界的定义来证明.</p>
+		<p>法一：</p>
+		<p>$(1)1\in Q,\forall x\in A,x&lt;1,$故$1$是$A$的一个上界.</p>
+		<p>$(2)\forall c\in Q,c&lt;1,$取$x_{0}=\frac{1+c}{2}&lt;1,$故$x_{0}\in A$</p>
+		<p>又$x_{0}=\frac{1+c}{2}&gt;\frac{c+c}{2}=c$,</p>
+		<p>即$\exists x_{0}\in A,s.t.x_{0}&gt;c$</p>
+		<p>$\therefore$ $c$非$A$上界</p>
+		<p>故$sup A=1.$</p>
+		<p>法二：</p>
+		<p>$(1)1\in Q,\forall x\in A,x&lt;1,$故$1$是$A$的一个上界.</p>
+		<p>$(2)\forall c\in Q,0&lt;c&lt;1$,则$c$可记作:$c=c_{0}+0.c_{1}c_{2}\cdots c_{n}$或$c=0.c_{1}\cdots \dot{c_{m}}\cdots \dot{c_{n}}$(不是9循环)</p>
+		<p>取$x_{0}=c=c_{0}+0.c_{1}c_{2}\cdots c_{n}1$或$x_{0}=0.c_{1}\cdots \dot{c_{m}}\cdots (c_{n}+1)$<br/>则$x_{0}\in A,x_{0}&gt;c,$从而$c$非上界</p>
+		<p>$\therefore sup A=1$</p>
+		<p>变式：若在全体实数集$R$上考虑$A$的上确界,可运用法二，只需多考虑无限不循环小数即可.<br />
+		</p>
+		<p>8.证明$\mathbb{Q }$是不完备的有序集，如$A=\{r\in \mathbb{Q}:r&gt;0,r^2&lt;2\}$有上界2，但在$\mathbb{Q}$无上确界.</p>
+		<p> 证明（反证）:假设A有上确界$b\in Q$,则$b=\frac{p}{q}(p\in \mathbb{N},q\in \mathbb{N_{+}}),(p,q)=1.$</p>
+		<p>对A中，$\forall r\in A,r&gt;0$，故有$p,q\in \mathbb{N_+}$</p>
+		<p>由有理数是全序集可知，$(\frac{p}{q})^2=2,(\frac{p}{q}^2)&gt;2,(\frac{p}{q})^2&lt;2$有且只有一个成立.</p>
+		<p>若$(\frac{p}{q})^2=2,$则$p^2=2q^2$,等式右边为偶数，可得$p=2k$,代入可得$q^2=2k^2$,即q也为偶数，这与p,q互质矛盾.</p>
+		<p>若$(\frac{p}{q})^2&lt;2,$则$\exists r=\frac{2-(\frac{p}{q})^2}{2+\frac{2p}{q}}$使得<br />
+		\begin{align}\label{equ:com}<br />
+		(\frac{p}{q}+r)^2&amp;=(\frac{p}{q})^2+2r\frac{p}{q}+r^2\nonumber<br/>&amp;=(\frac{p}{q})^2+r(r+\frac{2p}{q})\nonumber<br/>&amp;=2-[2-(\frac{p}{q})^2+r(r+\frac{2p}{q})]\nonumber<br/>&amp;\leq 2-[2-(\frac{p}{q})^2]+r(2+\frac{2p}{9})(r&lt;2)\nonumber<br/>&amp;=2\nonumber<br />
+		\end{align}<br />
+		从而有$\frac{p}{q}+r\in A$,而$\frac{p}{q}+r&gt;\frac{p}{q}$,这与$b=\frac{p}{q}$为A的上界矛盾.</p>
+		<p>若$(\frac{p}{q})^2&lt;2$,则$\exists s=\frac{q}{2p}(\frac{p^2}{q^2}-2)\in \mathbb{Q},s&gt;0$使得：<br />
+		\begin{align}<br />
+		(\frac{p}{q}-s)^2&amp;=(\frac{p}{q})^2-2s\frac{p}{q}+s^2\nonumber<br/>&amp;=2+s^2+(\frac{p^2}{q^2}-2)-2s\frac{p}{q}\nonumber<br/>&amp;=2+s^2+\frac{p^2}{q^2}-2-2\frac{q}{2p}(\frac{p^2}{q^2}-2)\frac{p}{q}<br />
+		\nonumber<br/>&amp;=2+s^2\nonumber<br/>&amp;&gt;2\nonumber<br />
+		\end{align}<br />
+		即$\frac{p}{q}-s$为A的上界，这与b是上确界矛盾.</p>
+		<p>综上，$\mathbb{Q}$是不完备的.<br />
+		</p>
+		<p>9.设$\mathscr{P}(X)=\{A:A\subset X\}$证$\mathscr{P}(X)$是序完备的.</p>
+		<p>解析：验证序完备，只需证$\mathscr{P}(X)$的任何 非空有上界集合都有上确界即可.</p>
+		<p>证明：设$\mathscr{A}\in P(X)$,则$\mathscr{A}$有上界X</p>
+		<p>记$O=\bigcup_{A\in \mathscr{A}}A$,则$O\in \mathscr{P}(X)$</p>
+		<p>下证O为$\mathscr{A}$的上确界.</p>
+		<p>①$\forall A\in \mathscr{A},A\subset \bigcup_{A\in \mathscr{A}}A=O$,故O是$\mathscr{A}$的一个上界</p>
+		<p>②$\forall C\subseteqq O,\exists a\in O,a\notin C$</p>
+		<p>由$a\in O$得$\exists A\in \mathscr{A},a\in A,$又$a\notin C,$故$A\subset C$不成立</p>
+		<p>即C非$\mathscr{A}$的上界</p>
+		<p>综上O是$\mathscr{A}$的上确界.</p>
+		<p>即$\mathscr{P}(X)$的任何 非空有上界集合都有上确界,从而$\mathscr{P}(X)$是序完备的.<br />
+		</p>
+		<p>10.证明：$f:\mathbb{N}^2\rightarrow \mathbb{N}$为双射，其中$f=2^m(2n+1)-1$.</p>
+		<p>解析：验证f是双射,只需证f既是单射又是满射.</p>
+		<p>证明：先证f是单射:<br />
+		$$\forall (m_1,n_1),(m_2,n_2)\in \mathbb{N}^2,f(m_1,n_1)=f(m_2,n_2)$$<br />
+		$$2^{m_1}(2n_1+1)-1=2^{m_2}(2n_2+1)-1$$<br />
+		$$2^{m_1-m_2}(2n_1+1)=2n_2+1$$</p>
+		<p>假设$m_1\neq m_2$,不妨设$m_1&gt;m_2$.</p>
+		<p>等式左边为偶数,右边为奇数,不成立,故$m_1=m_2.$</p>
+		<p>代入上式得$n_1=n_2$</p>
+		<p>从而f为单射.</p>
+		<p>再证f为满射(第二数学归纳法)：</p>
+		<p>①$k=0$时,$\exists (0,0)\in \mathbb{N}^2$,使得$f(0,0)=0$.</p>
+		<p>②假设$\forall l&lt;k,\exists(m,n)\in\mathbb{N}^2,$使得$f(m,n)=l$.</p>
+		<p>则当k为偶数时即$k=2p,\exists(0,p)\in \mathbb{N}^2,f(0,p)=2p=k$.</p>
+		<p>k为奇数时，即$k=2p+1$.</p>
+		<p>显然$p&lt;k$,由归纳假设得,$\exists (m_p,n_p),s.t. f(m_p,n_p)=p.$</p>
+		<p>即$2^{m_p}(2n_p+1)-1=p$<br />
+		\begin{align}<br />
+		f(m_p+1,n_p)&amp;=2^{m_p+1}(2n_p+1)-1\nonumber<br/>&amp;=2^{m_p}(2n_p+1)-1+4n_p+2\nonumber<br/>&amp;=2[2^{m_p}(2n_p+1)-1]+1\nonumber<br/>&amp;=2f(m_p,n_p)+1\nonumber<br/>&amp;=2p+1\nonumber<br/>&amp;=k\nonumber<br />
+		\end{align}</p>
+		<p>综合①②,$\forall k\in \mathbb{N},\exists(m,n)\in \mathbb{N}^2,s.t.f(m,n)=k$</p>
+		<p>从而f为满射.</p>
+		<p>综上所述,f为双射.<br />
+		</p>
+		<p>11.证明任意一个无限集必有一个可数子集.</p>
+		<p>证明：设$X$是无限集，则$X\neq \varnothing,$即$\exists a_0\in X$</p>
+		<p>由$X\backslash \{a_0\}\neq \varnothing$得$\exists a_1\in X\backslash \{a_0\}.$</p>
+		<p>$\cdots$</p>
+		<p>由$X\backslash \{a_0,a_1,\cdots,a_{n-1}\}\neq \varnothing$得$\exists a_n\in X\backslash\{a_0,a_1,\cdots,a_{n-1}\}$</p>
+		<p>故$\{a_n\}^{\infty}_{n=0}$为$X$的一个可数子集.<br />
+		</p>
+		<p>12.证明可数集的无限子集是可数集.</p>
+		<p>证明：设$A$为可数集，$B$为$A$的无限子集</p>
+		<p>则存在双射$f:\mathbb{N}\rightarrow A,$即$A=\{f(1),f(2),\cdots\}$</p>
+		<p>$B$中的每一个元素在序列$f(1),f(2),\cdots$中恰巧出现一次，将这些元素按照在$f(1),f(2),\cdots$中的顺序排列</p>
+		<p>即$B=\{f(k_1),f(k_2),\cdots\}$,记$g(i)=f(k_i)$</p>
+		<p>由$B$无限得，$g(i)$对$\forall i\in \mathbb{N}$有定义</p>
+		<p>这样$g:\mathbb{N}\rightarrow B$为双射,因此$B$是可数集.<br />
+		</p>
+		<p>13.$X$为无限集,$Y$是可数集，则$X$是可数集当且仅当存在单射$f:X\rightarrow Y.$</p>
+		<p>证明：</p>
+		<p>必要性：</p>
+		<p>$\because X,Y$均为可数集</p>
+		<p>$\therefore f:X \rightarrow Y$是双射，故存在单射$f:X\rightarrow Y$</p>
+		<p>充分性：</p>
+		<p>$\because \exists$单射$f:X\rightarrow Y$</p>
+		<p>$\therefore |X|\leq|Y|$,又$Y$可数</p>
+		<p>$\therefore X$也是可数集.</p>
+		<p>故$X$是可数集当且仅当存在单射$f:X\rightarrow Y.$<br />
+		</p>
+		<p>14.证明至多可数多个可数集的并还是至多可数的.</p>
+		<p>证明：如果这个并集为空集,没有什么可讨论的,以下假设这个并集非空,由于对有限个至多可数集总能通过添加空集的方式将其转化为可数多个至多可数集的情况，故可以设所讨论的<br />
+		集合族为$\{A_n:n\in \mathbb{N}\}$,其中每个$A_n$至多可数.</p>
+		<p>定义新的集合族$\{B_n:n\in \mathbb{N}\},B_0=A_0,B_n=A_n\backslash (\displaystyle\bigcup^{n-1}_{k=0}A_k),\forall n\in \mathbb{N_+}.$<br />
+		则$\{B_n:n\in \mathbb{N}\}$是两两不相交的,即$\forall m\neq n,B_m\bigcap B_n=\varnothing$,且每个$B_n$至多可数</p>
+		<p>令$X=\displaystyle\bigcup_{n\in \mathbb{N}}B_n=\bigcup_{n\in \mathbb N}A_n$</p>
+		<p>①如果只有有限个$B_n$非空且每个非空的$B_n$是有限集,则用归纳法可证明$\displaystyle \bigcup_{n\in \mathbb N}B_n$是有限集</p>
+		<p>②至少有一个$B_n$是无限集，或存在无限个$B_n$非空,此时$\displaystyle \bigcup_{n\in\mathbb N}B_n$为无限集</p>
+		<p>设$I=\{n\in \mathbb N :B_n\neq \varnothing\}$,则有$X=\displaystyle \bigcup_{n\in I}B_n$</p>
+		<p>并且$\forall n\in I,$存在单射$f_n:B_n\rightarrow \mathbb N,$</p>
+		<p>定义$f:X\rightarrow \mathbb N^2 <br/> f(x)=(n,f_n(x)),\forall x\in X,n\in I$</p>
+		<p>不难验证$f$是单射</p>
+		<p>由上一道证明以及$\mathbb N^2$是可数集得$X$是可数集.<br />
+		</p>
+		<p>15.设$X$是无限集,$Y$是至多可数集,则$|X\bigcup Y|=|X|.$</p>
+		<p>证明：</p>
+		<p>由无限集必有一个可数子集得$X$有一个可数子集$A$,记$B=X\backslash A,$则$X=A\bigcup B$</p>
+		<p>由至多可数多个可数集的并还是至多可数的得$A\bigcup Y$至多可数</p>
+		<p>由$A$和$A\bigcup Y$是可数集得存在双射$g:A\rightarrow A\bigcup Y$</p>
+		<p>令</p>
+		$$
+			f(x)=\left \{<br />
+			\begin{array}{l}<br />
+			% after <br/>: \hline or \cline{col1-col2} \cline{col3-col4} ...<br />
+			I_B(x) <br/> \  x\in B<br/><br />
+			g(x) <br/> <br/> x\in A <br/><br />
+			\end{array}<br />
+			\right.<br />
+		$$
+		<p>则$f:X\rightarrow X\bigcup Y$为双射,从而$|X\bigcup Y|=|X|.$<br />
+		</p>
+		
+		<p>16.证明：一个集合是无限集当且仅当它等势于它的一个真子集.</p>
+		<p>解析：无限集不是特别好证,我们可以用其等价命题如逆否命题来证.</p>
+		<p>逆否命题：一个集合是有限集当且仅当它不等势于它的任何一个真子集.</p>
+		<p>先证：一个集合是有限集时,它不等势于它的任何一个真子集.（即一个集合等势于它的一个真子集时，该集合为无限集）</p>
+		<p>设$X$为有限集，即存在双射$f:\{0,1,\cdots,n\}\rightarrow X$</p>
+		<p>$\forall C\subsetneqq X,f^{-1}(C)\subsetneqq\{0,1,\cdots,n\},|C|=|f^{-1}(C)|&lt;n+1=|X|$</p>
+		<p>故$C$与$X$不等势</p>
+		<p>再证整一个集合是无限集时,它等势于它的一个真子集.</p>
+		<p>设$X$是无限集，由任一无限集必有一个可数子集得$X$有一个可数子集$\displaystyle A=\{a_n\}^{\infty}_{n=0}$</p>
+		<p>记$B=X\backslash A$,于是$X=A\bigcup B.$</p>
+		<p>$\because \displaystyle A=\{a_n\}^{\infty}_{n=0}$与$\displaystyle \{a_n\}^{\infty}_{n=1}$等势</p>
+		<p>$\therefore $存在双射$g:A\rightarrow A\backslash \{a_0\}$<br />
+		</p>
+		<p>令</p>
+		$$
+			f(x)=\left \{<br />
+			\begin{array}{l}<br />
+			% after <br/>: \hline or \cline{col1-col2} \cline{col3-col4} ...<br />
+			I_B(x) <br/> \  x\in B<br/><br />
+			g(x) <br/> <br/> x\in A <br/><br />
+			\end{array}<br />
+			\right.<br />
+		$$
+		<p>则$f:X\rightarrow X\backslash \{a_0\}$是双射，从而$X$与其真子集等势.</p>
+		<p>综上一个集合是无限集当且仅当它等势于它的一个真子集.<br />    </p>
+		
+		<p>17.有理数集$\mathbb Q$是可数的.</p>
+		<p>解析：将$\mathbb Q$写成至多可数多个可数集的并，由至多可数多个可数集的并仍是至多可数可得结论.</p>
+		<p>证明：$\mathbb Q=\{\frac{m}{n}:m\in \mathbb Z,n\in \mathbb{N_+},(m,n)=1\}$</p>
+		<p>记$A_k=\{\frac{m}{n}\in \mathbb Q:|m|+n=k\}$,其中$|m$表示$m$的绝对值，则</p>
+		<p>$\mathbb Q=\displaystyle \bigcup ^{\infty}_{k=1}A_k$</p>
+		<p>其中每个$A_k$是有限集,实际上$|A_k|\leq2k-1$</p>
+		<p>由至多可数多个可数集的并仍是至多可数的可得$\mathbb Q$至多可数的</p>
+		<p>由$\mathbb Q$无限可得$\mathbb Q$是可数的.<br />
+		</p>
+		<p>18.对于集合$X,|X|&lt;|\mathscr P(X)|$，也就是不存在$X$到$\mathscr P(X)$上的满射.</p>
+		<p>证明（罗素悖论）：</p>
+		<p>任取$f:X\rightarrow \mathscr P(X)$,取$A=\{x\in X:x\notin f(x)\},$则$A\notin f(X)$</p>
+		<p>否则，存在$y\in X,f(y)=A$,这样会得到以下矛盾：</p>
+		<p>(1)如果$y\in f(y),$由$A$的定义,$y\notin f(y)$</p>
+		<p>(2)如果$y\notin f(y),$则$y\in A,$又$f(y)=A,$故有$y\in f(y)$</p>
+		<p>故不存在$X$到$\mathscr P(X)$的满射.<br />
+		</p>
+		<p>19.设$\{A_\alpha\} $为$X$的一个子集族，则$f(\displaystyle \bigcap_\alpha A_\alpha)\subset \displaystyle \bigcap_\alpha f(A_\alpha)$</p>
+		<p>证明：$$\forall x\in f(\displaystyle \bigcap_\alpha A_\alpha),\exists y\in \displaystyle \bigcap_\alpha A_\alpha,s.t.x=f(y)$$<br />
+		$$\exists y\in A_\alpha,\forall \alpha,s.t.x=f(y)$$<br />
+		$$x\in f(A_{\alpha}),\forall \alpha $$<br />
+		$$\Rightarrow x\in \displaystyle \bigcap_\alpha f(A_\alpha)$$<br />
+		$$\Rightarrow f(\displaystyle \bigcap_\alpha A_\alpha)\subset \displaystyle \bigcap_\alpha f(A_\alpha)$$<br />
+		</p>
+		<p>20.证明$(\displaystyle \bigcap _{\alpha\in I}A_{\alpha} )^c=\displaystyle \bigcup_{\alpha \in I}A^{c}_\alpha$.</p>
+		<p>证明：$\forall x\in (\displaystyle \bigcap _{\alpha\in I}A_{\alpha} )^c,$即$x\notin \displaystyle \bigcap _{\alpha\in I}A_\alpha ,$</p>
+		<p>$\Rightarrow x\in A^{c}_\alpha,\exists \alpha\in I.$</p>
+		<p>$\Rightarrow x\in \displaystyle \bigcup_{\alpha \in I}A^{c}_\alpha$</p>
+		<p>从而$(\displaystyle \bigcap _{\alpha\in I}A_\alpha )^c\subset\displaystyle \bigcup_{\alpha \in I}A^{c}_\alpha$</p>
+		<p>同理可证反包含即可得结论.</p>
+	</div>
 </div>
 
 <script type="text/javascript">
