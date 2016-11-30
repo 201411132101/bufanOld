@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<Link Rel="SHORTCUT ICON" href="../../animation/image/ico.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>习题解答</title>
+
+<link rel="stylesheet" type="text/css" href="../css/2.css">
+
+</head>
+
+<body>
+
+<div id="Layer1">
+	<table width="100%" border="2" cellpadding="0">
+		<tr>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/1.html">基本概念和性质</a></span></div></td>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/2.html">经典样例</a></span></div></td>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/3.html">习题</a></span></div></td>
+			<td width="25%"><div align="center"><span class="STYLE2"><a href="../3/4.html">习题解答</a></span></div></td>
+		</tr>
+	</table>
+</div>
+
+<div id="Layer2">
+	<p align="center" class="STYLE">习题解答</p>
+</div>
+  
+  
+<div id="Layer3">
+    <div style="text-indent: 2em;">
+      <p>1.证明：$\forall \varepsilon&gt;0,[\frac{1}{\varepsilon}]+1&gt;\frac{1}{\varepsilon}$</p>
+      <p>$\Rightarrow \frac{1}{[\frac{1}{\varepsilon}]+1}&lt;\varepsilon$</p>
+      <p>$\therefore \exists N=[\frac{1}{\varepsilon}]+1$使得$\forall n&gt;N,\frac{1}{n}&lt;\varepsilon.$<br />
+        </p>
+      <p>2.证明：</p>
+      <p>原命题的逆否命题为：如果$x&gt;y,$则$\exists \varepsilon&gt;0,x\geq y+\varepsilon.$</p>
+      <p>$\because x&gt;y$</p>
+      <p>$\therefore $设$x-y=k&gt;0$</p>
+      <p>$\Rightarrow x=y+k.$</p>
+      <p>则$\exists \varepsilon \leq k$且$\varepsilon &gt;0$使得$x\geq y+\varepsilon$</p>
+      <p>$\therefore $逆否命题成立，从而原命题成立.<br />
+        </p>
+      <p>3.证明：$\forall a\in A,a\leq b\Rightarrow a\leq\sup A\leq b$</p>
+      <p>$\forall b\in B,a\leq b\Rightarrow a$是$B$的一个上界</p>
+      <p>由下确界是最大的下界得$a\leq \inf B\leq b$</p>
+      <p>$\therefore \exists c=\sup A$或$c=\inf B$使得$a\leq c\leq b$.<br />
+        </p>
+      <p>4.证明：$\forall -a\in (-A)$有$-a\leq \sup(-A)\Rightarrow -\sup(-A)\leq a$</p>
+      <p>$\Rightarrow -\sup(-A)$是$A$的一个下界</p>
+      <p>由下确界是最大的下界得$-\sup(-A)\leq \inf A$即$\sup(-A)\geq-\inf A$</p>
+      <p>$\forall a\in A,a\geq \inf A\Rightarrow -a\leq -\inf(-A)$</p>
+      <p>$\Rightarrow -\inf(-A)$是$-A$的一个上界</p>
+      <p>由上确界是最小的上界得$-\inf(-A)\geq \sup(-A)$又$\sup(-A)\geq -\inf(-A)$</p>
+      <p>$\therefore \sup(-A)=-\inf A$</p>
+      <p>同理$\forall -a\in (-A)$有$-a\geq \inf(-A)\Rightarrow a\leq -\inf(-A)$</p>
+      <p>$\therefore -\inf(-A)$是 $A$的一个上界$\Rightarrow -\inf(-A)\geq \sup A$</p>
+      <p>即$\inf(-A)\leq -\sup A$</p>
+      <p>同理可证$\inf(-A)\geq \sup A$因此$\inf(-A)=-\sup A.$</p>
+      <p>5.证明：</p>
+      <p>(1)证明方法同典例$\sup(A+B)=\sup A+\sup B$,略</p>
+      <p>(2)由(1)得$\inf(A+B)=\inf A+\inf B\leq \inf A+\sup B\leq \sup A+\sup B$</p>
+      <p>再由典例$\sup(A+B)=\sup A+\sup B$得</p>
+      <p>$\inf(A+B)\leq\inf A+\sup B\leq \sup(A+B).$<br />
+        </p>
+      <p>6.解：结论不一定成立，反例：开区间列$\{(0,\frac{1}{n})\},n=1,2,\cdots$满足区间套的定义但$\bigcap_{n=1}^{+\infty}(0,\frac{1}{n})=\emptyset.$</p>
+      <p>证明：假设$\bigcap_{n=1}^{+\infty}(0,\frac{1}{n})\neq \emptyset$即$\exists \xi\in(0,\frac{1}{n},\forall n$</p>
+      <p>$\therefore \forall n,0&lt;\xi&lt;\frac{1}{n}$</p>
+      <p>$\because \varepsilon &gt;0,\exists N\in \mathbb N,$使得$\forall n&gt;N,$均有$\frac{1}{n}&lt;\varepsilon$</p>
+      <p>$\therefore \xi&lt;\frac{1}{n}&lt;\varepsilon$</p>
+      <p>$\because \forall \varepsilon&gt;0,x&lt;y+\varepsilon$则$x\leq y$又$\xi&lt;\varepsilon$</p>
+      <p>$\therefore $令$x=\xi,y=0$则$\xi\leq 0$矛盾</p>
+      <p>故$\bigcap_{n=1}^{+\infty}(0,\frac{1}{n})=\emptyset$</p>
+      <p>即存在开区间套的交集不为一个开区间或者单点集，从而闭区间套原理的结果在开区间不成立.<br />
+        </p>
+      <p>7.证明：</p>
+      <p>$(1)\forall x\in [0,1]$即$0\leq x\leq 1$</p>
+      <p>由于对$\forall n\in \mathbb N^+,-\frac{1}{n}&lt;0,1+\frac{1}{n}&gt;0$</p>
+      <p>即$\bigcap_{n=1}^{\infty}(-\frac{1}{n},1+\frac{1}{n})\supseteq [0,1]$</p>
+      <p>下证(反包含，用逆否命题）：对$\forall x_0&lt;0$且$\forall x_0+1$均有$x_0 \notin \bigcap_{n=1}^{\infty}(-\frac{1}{n},1+\frac{1}{n})$</p>
+      <p>$\forall x_0&lt;0,$取$N=[-\frac{1}{x_0}]+1\in \mathbb N^+$则有$N&gt;-\frac{1}{x_0}\Rightarrow x_0&lt;-\frac{1}{N}$</p>
+      <p>$\Rightarrow x_0\notin (-\frac{1}{N},1+\frac{1}{N})$从而$x_0\notin \bigcap_{n=1}^{\infty}(-\frac{1}{n},1+\frac{1}{n})$</p>
+      <p>$\forall x_0&gt;1,$取$M=[\frac{1}{x_0-1}]+1\in \mathbb N^+$则有$M&gt;\frac{1}{x_0-1}$</p>
+      <p>$\Rightarrow \frac{1}{M}+1&lt;x_0,x_0\notin (-\frac{1}{M},1+\frac{1}{M})$从而$x_0\notin \bigcap_{n=1}^{\infty}(-\frac{1}{n},1+\frac{1}{n})$</p>
+      <p>$\therefore \bigcap_{n=1}^{\infty}(-\frac{1}{n},1+\frac{1}{n}) \subseteq [0,1]$</p>
+      <p>综上$[0,1]=\bigcap_{n=1}^{\infty}(-\frac{1}{n},1+\frac{1}{n})$</p>
+      <p>(2)方法同上，略.</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+var OriginTitile = document.title;
+var titleTime;
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) 
+	{
+        document.title = '我藏好了哦';
+        clearTimeout(titleTime);
+    }
+    else 
+	{
+        document.title = '被你发现啦';
+        titleTime = setTimeout(function() {
+            document.title = OriginTitile;
+        }, 1000);
+    }
+});
+</script>
+</body>
+
+</html>
