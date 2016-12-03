@@ -106,15 +106,30 @@ MathJax.Hub.Config({
 		<p>由有理数是全序集可知，$(\frac{p}{q})^2=2,(\frac{p}{q}^2)&gt;2,(\frac{p}{q})^2&lt;2$有且只有一个成立.</p>
 		<p>若$(\frac{p}{q})^2=2,$则$p^2=2q^2$,等式右边为偶数，可得$p=2k$,代入可得$q^2=2k^2$,即q也为偶数，这与p,q互质矛盾.</p>
 		<p>若$(\frac{p}{q})^2&lt;2,$则$\exists r=\frac{2-(\frac{p}{q})^2}{2+\frac{2p}{q}}$使得<br />
-		\begin{align}\label{equ:com}<br />
-		(\frac{p}{q}+r)^2&amp;=(\frac{p}{q})^2+2r\frac{p}{q}+r^2\nonumber<br/>&amp;=(\frac{p}{q})^2+r(r+\frac{2p}{q})\nonumber<br/>&amp;=2-[2-(\frac{p}{q})^2+r(r+\frac{2p}{q})]\nonumber<br/>&amp;\leq 2-[2-(\frac{p}{q})^2]+r(2+\frac{2p}{9})(r&lt;2)\nonumber<br/>&amp;=2\nonumber<br />
-		\end{align}<br />
+		
+		$$
+		\begin{align}
+		  (\frac{p}{q}+r)^2 &=    (\frac{p}{q})^2+2r\frac{p}{q}+r^2  \nonumber  \\
+							&=    (\frac{p}{q})^2+r(r+\frac{2p}{q})  \nonumber  \\
+							&=    2-[2-(\frac{p}{q})^2+r(r+\frac{2p}{q})]  \nonumber  \\
+							&\leq 2-[2-(\frac{p}{q})^2]+r(2+\frac{2p}{9})(r&lt;2)  \nonumber \\
+							&=    2  \nonumber
+		\end{align}
+		$$
+		
 		从而有$\frac{p}{q}+r\in A$,而$\frac{p}{q}+r&gt;\frac{p}{q}$,这与$b=\frac{p}{q}$为A的上界矛盾.</p>
 		<p>若$(\frac{p}{q})^2&lt;2$,则$\exists s=\frac{q}{2p}(\frac{p^2}{q^2}-2)\in \mathbb{Q},s&gt;0$使得：<br />
-		\begin{align}<br />
-		(\frac{p}{q}-s)^2&amp;=(\frac{p}{q})^2-2s\frac{p}{q}+s^2\nonumber<br/>&amp;=2+s^2+(\frac{p^2}{q^2}-2)-2s\frac{p}{q}\nonumber<br/>&amp;=2+s^2+\frac{p^2}{q^2}-2-2\frac{q}{2p}(\frac{p^2}{q^2}-2)\frac{p}{q}<br />
-		\nonumber<br/>&amp;=2+s^2\nonumber<br/>&amp;&gt;2\nonumber<br />
-		\end{align}<br />
+		
+		$$
+		\begin{align}
+		  (\frac{p}{q}-s)^2 &= (\frac{p}{q})^2-2s\frac{p}{q}+s^2  \nonumber \\
+							&= 2+s^2+(\frac{p^2}{q^2}-2)-2s\frac{p}{q}  \nonumber \\
+							&= 2+s^2+\frac{p^2}{q^2}-2-2\frac{q}{2p}(\frac{p^2}{q^2}-2)\frac{p}{q}  \nonumber \\
+							&= 2+s^2  \nonumber\\
+							&&gt; 2  \nonumber
+		\end{align}
+		$$
+		
 		即$\frac{p}{q}-s$为A的上界，这与b是上确界矛盾.</p>
 		<p>综上，$\mathbb{Q}$是不完备的.<br />
 		</p>
@@ -147,9 +162,18 @@ MathJax.Hub.Config({
 		<p>k为奇数时，即$k=2p+1$.</p>
 		<p>显然$p&lt;k$,由归纳假设得,$\exists (m_p,n_p),s.t. f(m_p,n_p)=p.$</p>
 		<p>即$2^{m_p}(2n_p+1)-1=p$<br />
-		\begin{align}<br />
-		f(m_p+1,n_p)&amp;=2^{m_p+1}(2n_p+1)-1\nonumber<br/>&amp;=2^{m_p}(2n_p+1)-1+4n_p+2\nonumber<br/>&amp;=2[2^{m_p}(2n_p+1)-1]+1\nonumber<br/>&amp;=2f(m_p,n_p)+1\nonumber<br/>&amp;=2p+1\nonumber<br/>&amp;=k\nonumber<br />
-		\end{align}</p>
+		
+		$$
+		\begin{align}
+		  f(m_p+1,n_p) &= 2^{m_p+1}(2n_p+1)-1  \nonumber\\
+					   &= 2^{m_p}(2n_p+1)-1+4n_p+2  \nonumber\\
+					   &= 2[2^{m_p}(2n_p+1)-1]+1  \nonumber\\
+					   &= 2f(m_p,n_p)+1  \nonumber\\
+					   &= 2p+1  \nonumber\\
+					   &= k  \nonumber
+		\end{align}
+		$$
+		
 		<p>综合①②,$\forall k\in \mathbb{N},\exists(m,n)\in \mathbb{N}^2,s.t.f(m,n)=k$</p>
 		<p>从而f为满射.</p>
 		<p>综上所述,f为双射.<br />
